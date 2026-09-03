@@ -50,9 +50,19 @@ for i in list2:
         list1.append(i)  # 如果元素不在 list1 中，则将其添加到 list1 中
 print("合并后的列表（保留顺序）：", list1)  # 输出合并后的列表，保留顺序的结果
 '''
-
+'''list练习3
 # 生成1-20的平方列表。从数字列表中提取所有偶数，并计算其平方，组成一个新的列表
 squares = [x**2 for x in range(1, 21)]  # 使用列表推导式生成1到20的平方列表
 even_squares = [x for x in squares if x % 2 == 0]  # 从平方列表中提取所有偶数，组成一个新的列表
 print("1 到 20 的平方列表：", squares)  # 输出1到20的平方列表
 print("平方列表中的偶数：", even_squares)  # 输出平方列表中的偶数列表
+'''
+
+# 邮箱格式验证：用户输入一个邮箱，验证其格式是否正确（包含@和.，且@在.之前）
+email = input("请输入邮箱地址：")  # 获取用户输入的邮箱地址
+if "@" in email and "." in email and email.index("@") < email.index("."):
+    print("邮箱格式正确")
+else:
+    print("邮箱格式不正确")
+# email.index用于获取指定字符在字符串中第一次出现的位置，如果@在.之前，则说明邮箱格式正确，否则格式不正确
+# gmail的.可以在@之前，这个方法不太严谨
